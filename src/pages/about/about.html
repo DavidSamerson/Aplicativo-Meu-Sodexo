@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="meuSodexo">
+    <ion-title>
+      Histórico de uso
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card *ngFor="let resultado of resultados">
+
+        <ion-card-header [color]="resultado.type == 'Débito' ? 'danger2' : 'primary2' ">
+          {{ resultado.type }} dia {{ resultado.date }}
+        </ion-card-header>
+      
+        <ion-list>
+          <button ion-item>
+            <ion-icon name="ios-cash-outline" [color]="resultado.type == 'Débito' ? 'danger2' : 'primary2' " item-start></ion-icon>
+            {{ resultado.value }}
+          </button>  
+          <button ion-item>
+              <ion-icon name="md-pin"  [color]="resultado.type == 'Débito' ? 'danger2' : 'primary2' " item-start></ion-icon>
+              {{ resultado.history }}
+          </button>  
+        </ion-list>
+      </ion-card>
+
+</ion-content>

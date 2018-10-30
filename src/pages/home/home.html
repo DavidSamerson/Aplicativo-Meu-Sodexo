@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar color="meuSodexo">
+    <ion-title>Estatística</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card class="cardSaldo">
+        <ion-card-header>
+          <p class="textodisponivelUso"> Você tem <span class="disponivelUso"> {{ estatistica.balanceAmount }} </span></p>
+        </ion-card-header>
+    </ion-card>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6>
+            <ion-row>
+              Hoje são
+            </ion-row>
+            <ion-row>
+              {{ resultTudo }}
+            </ion-row>
+        </ion-col>
+        <ion-col col-6>
+          
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    {{ estatistica | json }}
+
+ 
+</ion-content>
